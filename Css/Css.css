@@ -1,7 +1,5 @@
 
-*{
-   
-   
+*{  
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -25,6 +23,7 @@ header{
     min-height: 10vh;
     background-color: var(--backgruond_color_header);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 30px ;
     position: fixed;
@@ -82,6 +81,7 @@ header img{
     right: 15px;
     top: 15px;
     display: none;
+    background-color: #ffffff;
     
 }
 .list ol span{
@@ -98,9 +98,8 @@ header img{
 /* section */
 .section{
     width: 100%;
-    min-height:100vh ;
+    min-height:100vh;
     display: flex;
-    justify-content: center;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
@@ -172,10 +171,12 @@ header img{
 
   
 }
-.section .image{
+.section .image img{
     transition: 0.6s;
+    width: 500px;
+    height: 500px;
 }
-.section .image:hover{
+.section .image img:hover{
    transform: scale(1.1,1.1);
 }
 /* section1 */
@@ -191,7 +192,7 @@ header img{
 }
 .section1 .info {
     width: 30%;
-    
+    margin-bottom: 20px;
 
 }
 .section1 .info h1{
@@ -219,10 +220,12 @@ header img{
     
 }
 .info h4 .span2{
-    color: #ff0000;
+    color: #ff0000;  
     
-    
-    
+}
+.section1 .image img{
+    width: 500px;
+    height: 500px;
 }
 
 .info p{
@@ -230,6 +233,7 @@ header img{
     padding-top: 1.5%;
     color: #ffffff;
     text-align:left;
+    line-height: 25px;
     
     
 }
@@ -277,7 +281,7 @@ header img{
     
 }
 
- .continar .card1:hover{
+.continar .card1:hover{
     border: 2px solid #ff0000;
     transform: scale(1.2);
     
@@ -300,7 +304,7 @@ header img{
     padding-left: 20px;
     font-size: 2.6em;
     color: #ffffff;
-   padding-left:20%;
+    padding-left:20%;
     
 }
 .section3 h1 span{
@@ -320,13 +324,7 @@ header img{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-top: 20px;
-    
-    
-
-    
-
-    
+    padding-top: 20px;  
 }
 .section3 .icon img{
     margin: 20px;
@@ -339,6 +337,10 @@ header img{
     animation-duration: 3s;
     animation-iteration-count: infinite;
    
+}
+.section3 .image img{
+    width: 500px;
+    height: 500px;
 }
 @keyframes x{
     0%{  transform: scale(1.2,1.2);border: 5px solid #ff0000; }
@@ -356,6 +358,7 @@ footer{
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
+    padding-bottom: 30px;
     
 }
 
@@ -388,15 +391,43 @@ footer h1 span{
 }
 /* media */
 @media screen and (max-width:900px) {
+    .section .image img{
+        width: 300px;
+        height: 300px;
+    }
+    .section .section_Part1 {
+        padding-left: 15px;
+    }
+    .section1 .image img{
+        width: 300px;
+        height: 300px;
+    }
+    .section3 .image img{
+        width: 300px;
+        height: 300px;
+    }
+    .section1 .info h1{
+        font-size: 1em;
+    
+    }
+    footer p{
+        color: #ffffff;
+        font-size: 0.8em;
+    }
+    .subscribe a{
+        display: none;
+    
+    }
+    .section1 .info {
+        width: 250px;
+    
+    }
     /* header */
     header img{
         display: block;
-    
     }
     .list ol li{
-    margin-bottom:30px;
-    
-    
+        margin-bottom:30px;
     }
     .list ol{
         background-color: #333030;
@@ -410,7 +441,7 @@ footer h1 span{
     .list{
         position: absolute;
         right: 0px;
-        top: 0px;
+        top: 60px;
         transform: translatex(100%);
         
     }
